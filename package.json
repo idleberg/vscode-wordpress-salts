@@ -1,0 +1,107 @@
+{
+  "name": "wordpress-salts",
+  "displayName": "WordPress Salts",
+  "description": "Context-aware WordPress salts insertion for PHP, YAML, DotEnv and JSON files",
+  "version": "0.0.0",
+  "publisher": "idleberg",
+  "license": "MIT",
+  "author": {
+    "name": "Jan T. Sott",
+    "url": "http://github.com/idleberg"
+  },
+  "main": "./lib/main",
+  "scripts": {
+    "build": "tsc --pretty --project ./",
+    "dev": "tsc --watch --pretty --project ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "vscode-linter",
+    "vscode:prepublish": "node run build && gulp"
+  },
+  "keywords": [
+    "wordpress",
+    "wordpress salts",
+    "cryptography"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idleberg/vscode-wordpress-salts"
+  },
+  "homepage": "https://github.com/idleberg/vscode-wordpress-salts#readme",
+  "bugs": {
+    "url": "https://github.com/idleberg/vscode-wordpress-salts/issues"
+  },
+  "icon": "images/logo.png",
+  "galleryBanner": {
+    "color": "#21759b"
+  },
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:env",
+    "onLanguage:json",
+    "onLanguage:php",
+    "onLanguage:yaml"
+  ],
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "WordPress Salts",
+      "properties": {
+        "wordpress-salts.saltLength": {
+          "type": "number",
+          "default": 64,
+          "minimum": 64,
+          "maximum": 4096,
+          "description": "Default length of salts, between 64 and 4096 characters"
+        },
+        "wordpress-salts.jsonIndentation": {
+          "type": "number",
+          "default": 2,
+          "minimum": 0,
+          "description": "Default indentation of JSON strings"
+        },
+        "wordpress-salts.alignPHP": {
+          "type": "boolean",
+          "default": true,
+          "description": "Align definitions for better visual grepping"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "extension.wordpress-salts.insert",
+        "title": "WordPress Salts: Insert"
+      }
+    ],
+    "keybindings": [
+      {
+        "key": "ctrl+alt+w",
+        "when": "editorFocus",
+        "command": "extension.wordpress-salts.insert"
+      }
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test"
+    }
+  },
+  "dependencies": {
+    "wp-salts": "^0.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^12.0.2",
+    "gulp": "^4.0.0",
+    "gulp-raster": "^0.2.0",
+    "gulp-rename": "^1.2.2",
+    "husky": "^0.14.3",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5",
+    "vscode": "^1.1.34",
+    "vscode-linter": "^0.2.2"
+  }
+}
