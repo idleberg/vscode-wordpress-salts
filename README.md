@@ -49,6 +49,10 @@ Install extension dependencies:
 $ cd wordpress-salts && npm install
 ```
 
+## Usage
+
+Run the *WordPress Salts: Insert* from the [command palette](https://code.visualstudio.com/docs/editor/codebasics#_command-palette) to insert salts at the current cursor position. The output format is determined by the scope of the active document.
+
 ## Related
 
 - [atom-wordpress-salts](https://atom.io/packages/wordpress-salts)
