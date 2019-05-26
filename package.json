@@ -15,7 +15,7 @@
     "dev": "tsc --watch --pretty --project ./",
     "postinstall": "node ./node_modules/vscode/bin/install",
     "test": "vscode-linter",
-    "vscode:prepublish": "node run build && gulp"
+    "vscode:prepublish": "npm run build && gulp"
   },
   "keywords": [
     "wordpress",
