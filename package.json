@@ -92,6 +92,7 @@
     }
   },
   "dependencies": {
+    "vscode-insert-text": "^0.2.0",
     "wp-salts": "^0.3.3"
   },
   "devDependencies": {

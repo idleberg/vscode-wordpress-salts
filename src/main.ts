@@ -1,10 +1,10 @@
 'use strict';
 
 import { commands, window } from 'vscode';
+import { insertText } from 'vscode-insert-text';
 import { wpSalts } from 'wp-salts';
 import {
   getConfig,
-  insertText,
   dotEnvOut,
   phpOutput,
   yamlOutput,

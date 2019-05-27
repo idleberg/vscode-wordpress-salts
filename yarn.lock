@@ -3947,6 +3947,11 @@ vinyl@^2.0.0:
     remove-trailing-separator "^1.0.1"
     replace-ext "^1.0.0"
 
+vscode-insert-text@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/vscode-insert-text/-/vscode-insert-text-0.2.0.tgz#1fa3d72047735ca8cd291b2777e0d62d2d6a92ef"
+  integrity sha512-x0uAm0xunhXWuIc3R03hdNqf0KJju4Tzy98Z60m4MDssXef6zfIk01ZGHL7X90MDJjjXJmixsXmt/IqhMThesg==
+
 vscode-linter@^0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/vscode-linter/-/vscode-linter-0.2.2.tgz#2a3a4a1d28ed6242b3ae0ae1eace01b21226027e"

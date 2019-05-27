@@ -48,23 +48,9 @@ const getConfig = (key: string|undefined): any|WorkspaceConfiguration => {
   return workspace.getConfiguration('wordpress-salts');
 };
 
-const insertText = (text: string) => {
-  const textEditor = window.activeTextEditor;
-
-  textEditor.edit(
-    edit => textEditor.selections.forEach(
-      selection => {
-        edit.delete(selection);
-        edit.insert(selection.start, text);
-      }
-    )
-  );
-};
-
 export {
   dotEnvOut,
   phpOutput,
   yamlOutput,
-  getConfig,
-  insertText
+  getConfig
 };
