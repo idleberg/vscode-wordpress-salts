@@ -1,4 +1,22 @@
+.circleci/
+.editorconfig
+.gitignore
 .travis.yml
 gulpfile.js
 package-lock.json
+tsconfig.json
+tslint.json
 yarn.lock
+
+# Package managers
+npm-debug.log*
+package-lock.json
+vendor/
+yarn-error.log
+
+# Project specific
+*.vsix
+images/logo.svg
+src/
+todo.md
+tsconfig.tsbuildinfo
