@@ -23,8 +23,6 @@ const insertSalt = () => {
   const textEditor = window.activeTextEditor;
   const scope = textEditor.document.languageId;
 
-  console.log(textEditor, scope);
-
   if (!textEditor) {
     return;
   }
