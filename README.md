@@ -6,7 +6,7 @@
 [![CircleCI](https://flat.badgen.net/circleci/github/idleberg/vscode-wordpress-salts)](https://circleci.com/gh/idleberg/vscode-wordpress-salts)
 [![David](https://flat.badgen.net/david/dep/idleberg/vscode-wordpress-salts)](https://david-dm.org/idleberg/vscode-wordpress-salts)
 
-Context-aware WordPress salts insertion for PHP, YAML, DotEnv and JSON files.
+Context-aware WordPress salts insertion for PHP, YAML, DotEnv and JSON files without the need of an internet-connection
 
 ## Installation
 
