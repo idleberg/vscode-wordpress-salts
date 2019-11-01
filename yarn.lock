@@ -5219,10 +5219,10 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.0.tgz#bd76d6a23323e2ca8ffa12028dc04559c75f9019"
   integrity sha512-iq+S7vZJE60yejDYM0ek6zg308+UZsdtPExWP9VZoCFCz1zkJoXFnAX7aZfd/ZwrkidzdUZL0C/ryW+JwAiIGw==
 
-vscode-insert-text@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/vscode-insert-text/-/vscode-insert-text-1.0.0.tgz#a25261d445fd6c34d84ed910534acb55a1c8d147"
-  integrity sha512-9SGHgkvNQHT8s7UcV/cY3/173AHDv1CqmWEfMPjJ9xzH5Sgv3oo3BEynvaH8RsudDeuj3SnYrRsfBYIkwxxfNg==
+vscode-insert-text@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/vscode-insert-text/-/vscode-insert-text-1.0.1.tgz#1d2a189f846b1537d4cc44ee2b9ce22725f8e450"
+  integrity sha512-DdV84i9y+314f34uJ7nfNWuWwhzisaAkre0Dy9dKpNvw/VbQUxRmpmrZzIEqO18WRcKpPLiG8GOPiXVMG0IO+A==
 
 vscode-test@^0.4.1:
   version "0.4.2"
