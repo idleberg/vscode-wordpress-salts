@@ -1,11 +1,7 @@
 version: 2.1
 
 commands:
-<<<<<<< HEAD
   run-tests:
-=======
-  run-test:
->>>>>>> c289081d8cd7a39bbd4930f915fb107974bcdf65
     steps:
       - checkout
       - restore_cache:
@@ -18,40 +14,24 @@ commands:
           paths:
             - ./node_modules
       - run:
-<<<<<<< HEAD
           name: Lint Source
           command: npm run test
-=======
-          name: Running Tests
-          command: npm test
->>>>>>> c289081d8cd7a39bbd4930f915fb107974bcdf65
 
 jobs:
   node-latest:
     docker:
       - image: circleci/node:latest
     steps:
-<<<<<<< HEAD
       - run-tests
-=======
-      - run-test
->>>>>>> c289081d8cd7a39bbd4930f915fb107974bcdf65
 
   node-lts:
     docker:
       - image: circleci/node:lts
     steps:
-<<<<<<< HEAD
       - run-tests
 
 workflows:
   node-multi-build:
-=======
-      - run-test
-
-workflows:
-  node-run-tests:
->>>>>>> c289081d8cd7a39bbd4930f915fb107974bcdf65
     jobs:
     - node-latest
     - node-lts
