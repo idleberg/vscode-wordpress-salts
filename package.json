@@ -2,7 +2,7 @@
   "name": "wordpress-salts",
   "displayName": "WordPress Salts",
   "description": "Context-aware WordPress salts insertion for PHP, YAML, DotEnv and JSON files without the need of an internet-connection",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "publisher": "idleberg",
   "license": "MIT",
   "author": {
