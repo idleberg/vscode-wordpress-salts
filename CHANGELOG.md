@@ -1,3 +1,7 @@
+# v0.2.1 [#](https://github.com/idleberg/vscode-wordpress-salts/releases/tag/0.2.1)
+
+- update dependencies
+
 # v0.2.0 [#](https://github.com/idleberg/vscode-wordpress-salts/releases/tag/0.2.0)
 
 - compile with Webpack
