@@ -56,7 +56,7 @@ Run the *WordPress Salts: Insert* from the [command palette](https://code.visual
 ## Related
 
 - [atom-wordpress-salts](https://atom.io/packages/wordpress-salts)
-- [sublime-wordpress-salts](https://github.com/idleberg/sublime-wordpress-salts)
+- [sublime-wordpress-salts](https://packagecontrol.io/packages/WordPress%20Salts)
 - [wp-salts-cli](https://www.npmjs.com/package/wp-salts-cli)
 
 ## License
