@@ -11,6 +11,7 @@ webpack.config.js
 yarn.lock
 
 # Package Managers
+node_modules/
 npm-debug.log*
 package-lock.json
 vendor/
