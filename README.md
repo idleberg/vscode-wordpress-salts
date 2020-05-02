@@ -6,7 +6,7 @@
 [![CircleCI](https://flat.badgen.net/circleci/github/idleberg/vscode-wordpress-salts)](https://circleci.com/gh/idleberg/vscode-wordpress-salts)
 [![David](https://flat.badgen.net/david/dep/idleberg/vscode-wordpress-salts)](https://david-dm.org/idleberg/vscode-wordpress-salts)
 
-Context-aware WordPress salt key insertion for PHP, YAML and DotEnv files without the need of an internet-connection
+Context-aware WordPress salt key generation for PHP, YAML and DotEnv files without the need of an internet-connection
 
 ## Installation
 

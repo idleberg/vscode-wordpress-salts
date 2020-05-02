@@ -1,7 +1,7 @@
 {
   "name": "wordpress-salts",
   "displayName": "WordPress Salts",
-  "description": "Context-aware WordPress salts insertion for PHP, YAML, DotEnv and JSON files without the need of an internet-connection",
+  "description": "Context-aware WordPress salts generation for PHP, YAML, DotEnv and JSON files without the need of an internet-connection",
   "version": "1.0.0",
   "publisher": "idleberg",
   "license": "MIT",
@@ -11,7 +11,7 @@
   },
   "main": "./lib/extension",
   "scripts": {
-    "build": "webpack --mode none",
+    "build": "gulp && webpack --mode none",
     "dev": "webpack --mode none --watch",
     "postinstall": "node ./node_modules/vscode/bin/install",
     "test": "tslint --project .",
