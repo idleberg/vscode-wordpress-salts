@@ -21,7 +21,7 @@ const phpOutput = (salts: string[]): string => {
   const maxLength = getLongestString(Object.keys(salts)).length;
   const output: Array<string> = [];
 
-  Object.keys(salts).forEach(key => {
+  Object.keys(salts).map(key => {
     const whitespace = (getConfig('alignPHP')) ? ' '.repeat(maxLength - key.length) : '';
 
     output.push(`define('${key}', ${whitespace}'${salts[key]}');`);
@@ -33,7 +33,7 @@ const phpOutput = (salts: string[]): string => {
 const yamlOutput = (salts: string[]): string => {
   const output: Array<string> = [];
 
-  Object.keys(salts).forEach(key => {
+  Object.keys(salts).map(key => {
     output.push(`${key.toLowerCase()}: "${salts[key]}"`);
   });
 
