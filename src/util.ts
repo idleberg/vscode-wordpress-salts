@@ -1,23 +1,23 @@
-import { window, workspace, WorkspaceConfiguration } from 'vscode';
+import { workspace } from 'vscode';
 
-const getLongestString = (input: any) => {
+const getLongestString = (input: string[]) => {
   const map = input.map( (x: string) => x.length);
   const max = map.indexOf(Math.max(...map));
 
   return input[max];
 };
 
-const dotEnvOut = (salts: any) => {
+const dotEnvOut = (salts: string[]): string => {
   const output: Array<string> = [];
 
-  Object.keys(salts).forEach(key => {
+  Object.keys(salts).map(key => {
     output.push(`${key}='${salts[key]}'`);
   });
 
   return output.join('\n');
 };
 
-const phpOutput = (salts: any) => {
+const phpOutput = (salts: string[]): string => {
   const maxLength = getLongestString(Object.keys(salts)).length;
   const output: Array<string> = [];
 
@@ -30,7 +30,7 @@ const phpOutput = (salts: any) => {
   return output.join('\n');
 };
 
-const yamlOutput = (salts: any) => {
+const yamlOutput = (salts: string[]): string => {
   const output: Array<string> = [];
 
   Object.keys(salts).forEach(key => {
@@ -40,7 +40,8 @@ const yamlOutput = (salts: any) => {
   return output.join('\n');
 };
 
-const getConfig = (key: string|undefined): any|WorkspaceConfiguration => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const getConfig = (key: string | undefined): any => {
   if (key && key.length) {
     return workspace.getConfiguration('wordpress-salts')[key];
   }

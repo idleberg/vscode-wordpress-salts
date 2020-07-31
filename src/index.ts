@@ -1,6 +1,6 @@
 'use strict';
 
-import { commands, window } from 'vscode';
+import { commands, ExtensionContext, window } from 'vscode';
 import { insertText } from 'vscode-insert-text';
 import { wpSalts } from 'wp-salts';
 import {
@@ -11,12 +11,12 @@ import {
 } from './util';
 
 // Load package components
-const activate = (context) => {
+const activate = (context: ExtensionContext): void => {
   context.subscriptions.push(
-    commands.registerTextEditorCommand('extension.wordpress-salts.insert', (editor) => {
+    commands.registerTextEditorCommand('extension.wordpress-salts.insert', () => {
       return insertSalt();
     })
-    );
+  );
 };
 
 const insertSalt = () => {
