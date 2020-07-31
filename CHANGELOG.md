@@ -1,3 +1,8 @@
+# v1.0.1 [#](https://github.com/idleberg/vscode-wordpress-salts/releases/tag/1.0.1)
+
+- update dependencies
+- replace TSLint with ESLint
+
 # v1.0.0 [#](https://github.com/idleberg/vscode-wordpress-salts/releases/tag/1.0.0)
 
 - upgrade `wp-salts` to v1.0.0
