@@ -45,7 +45,7 @@
     "Other"
   ],
   "activationEvents": [
-    "onLanguage:env",
+    "onLanguage:dotenv",
     "onLanguage:json",
     "onLanguage:php",
     "onLanguage:yaml"
