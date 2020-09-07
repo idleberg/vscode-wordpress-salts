@@ -1,3 +1,8 @@
+# v1.0.2 [#](https://github.com/idleberg/vscode-wordpress-salts/releases/tag/1.0.2)
+
+- fix activation event for DotENV files
+- update dependencies
+
 # v1.0.1 [#](https://github.com/idleberg/vscode-wordpress-salts/releases/tag/1.0.1)
 
 - update dependencies
