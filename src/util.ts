@@ -1,4 +1,4 @@
-import { workspace } from 'vscode';
+import { getConfig } from 'vscode-get-config';
 
 const getLongestString = (input: string[]) => {
   const map = input.map( (x: string) => x.length);
@@ -17,20 +17,23 @@ const dotEnvOut = (salts: string[]): string => {
   return output.join('\n');
 };
 
-const phpOutput = (salts: string[]): string => {
+async function phpOutput(salts: string[]): Promise<string> {
   const maxLength = getLongestString(Object.keys(salts)).length;
+  const alignPHP = await getConfig('wordpress-salts.alignPHP')
   const output: Array<string> = [];
 
   Object.keys(salts).map(key => {
-    const whitespace = (getConfig('alignPHP')) ? ' '.repeat(maxLength - key.length) : '';
+    const whitespace = alignPHP
+      ? ' '.repeat(maxLength - key.length)
+      : '';
 
     output.push(`define('${key}', ${whitespace}'${salts[key]}');`);
   });
 
   return output.join('\n');
-};
+}
 
-const yamlOutput = (salts: string[]): string => {
+function yamlOutput(salts: string[]): string {
   const output: Array<string> = [];
 
   Object.keys(salts).map(key => {
@@ -38,20 +41,10 @@ const yamlOutput = (salts: string[]): string => {
   });
 
   return output.join('\n');
-};
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const getConfig = (key: string | undefined): any => {
-  if (key && key.length) {
-    return workspace.getConfiguration('wordpress-salts')[key];
-  }
-
-  return workspace.getConfiguration('wordpress-salts');
-};
+}
 
 export {
   dotEnvOut,
   phpOutput,
-  yamlOutput,
-  getConfig
+  yamlOutput
 };

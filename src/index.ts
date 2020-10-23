@@ -1,25 +1,25 @@
 'use strict';
 
 import { commands, ExtensionContext, window } from 'vscode';
+import { getConfig } from 'vscode-get-config';
 import { insertText } from 'vscode-insert-text';
 import { wpSalts } from 'wp-salts';
 import {
-  getConfig,
   dotEnvOut,
   phpOutput,
   yamlOutput,
 } from './util';
 
 // Load package components
-const activate = (context: ExtensionContext): void => {
+async function activate(context: ExtensionContext): Promise<void> {
   context.subscriptions.push(
-    commands.registerTextEditorCommand('extension.wordpress-salts.insert', () => {
-      return insertSalt();
+    commands.registerTextEditorCommand('extension.wordpress-salts.insert', async () => {
+      return await insertSalt();
     })
   );
-};
+}
 
-const insertSalt = () => {
+async function insertSalt() {
   const textEditor = window.activeTextEditor;
   const scope = textEditor.document.languageId;
 
@@ -27,7 +27,9 @@ const insertSalt = () => {
     return;
   }
 
-  const salts = wpSalts('', getConfig('saltLength'));
+  const { jsonIndentation, saltLength } = await getConfig('wordpress-salts');
+
+  const salts = wpSalts('', saltLength);
   let output = '';
 
   switch (scope) {
@@ -37,11 +39,11 @@ const insertSalt = () => {
       break;
 
     case 'json':
-      output = JSON.stringify(salts, null, getConfig('jsonIndentation'));
+      output = JSON.stringify(salts, null, jsonIndentation);
       break;
 
     case 'php':
-      output = phpOutput(salts);
+      output = await phpOutput(salts);
       break;
 
     case 'yaml':
@@ -53,6 +55,6 @@ const insertSalt = () => {
   }
 
   insertText(output);
-};
+}
 
 export { activate };
