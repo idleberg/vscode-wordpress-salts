@@ -1,3 +1,8 @@
+# v1.1.0 [#](https://github.com/idleberg/vscode-wordpress-salts/releases/tag/1.1.0)
+
+- replace `getConfig()` function
+- update dependencies
+
 # v1.0.2 [#](https://github.com/idleberg/vscode-wordpress-salts/releases/tag/1.0.2)
 
 - fix activation event for DotENV files
