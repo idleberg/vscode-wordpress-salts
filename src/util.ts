@@ -7,7 +7,7 @@ const getLongestString = (input: string[]) => {
   return input[max];
 };
 
-const dotEnvOut = (salts: string[]): string => {
+function dotEnvOut(salts: string[]): string {
   const output: Array<string> = [];
 
   Object.keys(salts).map(key => {
@@ -15,7 +15,7 @@ const dotEnvOut = (salts: string[]): string => {
   });
 
   return output.join('\n');
-};
+}
 
 async function phpOutput(salts: string[]): Promise<string> {
   const maxLength = getLongestString(Object.keys(salts)).length;

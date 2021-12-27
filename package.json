@@ -16,7 +16,7 @@
     "dev": "npm run start",
     "fix": "eslint --fix ./src",
     "lint": "eslint ./src",
-    "postinstall": "node ./node_modules/vscode/bin/install",
+    "prepare": "husky install",
     "start": "NODE_ENV=development node ./tools/build.cjs",
     "test": "npm run lint",
     "vscode:prepublish": "npm run build && gulp"
@@ -90,27 +90,22 @@
       }
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test"
-    }
-  },
   "dependencies": {
     "vscode-get-config": "^0.4.0",
     "vscode-insert-text": "^1.1.0",
-    "wp-salts": "^1.2.0"
+    "wp-salts": "^2.0.0"
   },
   "devDependencies": {
-    "@types/node": "^14.14.2",
-    "@typescript-eslint/eslint-plugin": "^4.5.0",
-    "@typescript-eslint/parser": "^4.5.0",
-    "esbuild": "^0.8.56",
-    "eslint": "^7.11.0",
+    "@types/node": "^16.11.17",
+    "@types/vscode": "^1.63.1",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.8.1",
+    "esbuild": "^0.14.8",
+    "eslint": "^8.5.0",
     "gulp": "^4.0.2",
     "gulp-raster": "^0.2.0",
     "gulp-rename": "^2.0.0",
-    "husky": "^4.3.0",
-    "typescript": "^4.0.3",
-    "vscode": "^1.1.37"
+    "husky": "^7.0.0",
+    "typescript": "^4.0.3"
   }
 }
