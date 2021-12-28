@@ -2,6 +2,7 @@
 
 - update `wp-salts` to v2.0.0
 - update tool-chain
+
 # v1.2.0 [#](https://github.com/idleberg/vscode-wordpress-salts/releases/tag/v1.2.0)
 
 - migrate to `esbuild` as bundler
