@@ -1,6 +1,6 @@
 # vscode-wordpress-salts
 
-> Context-aware WordPress salt key generation for PHP, YAML and DotEnv files without the need of an internet-connection
+> Offline WordPress salt key generation for PHP, YAML and DotEnv files
 
 [![Version](https://img.shields.io/github/v/release/idleberg/vscode-wordpress-salts?style=for-the-badge)](https://github.com/idleberg/vscode-wordpress-salts/releases)
 [![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/idleberg.nsis?style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=idleberg.nsis)
