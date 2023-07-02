@@ -1,3 +1,8 @@
+# v1.3.1 [#](https://github.com/idleberg/vscode-wordpress-salts/releases/tag/v1.3.1)
+
+- fix build config
+- update dependencies
+
 # v1.3.0 [#](https://github.com/idleberg/vscode-wordpress-salts/releases/tag/v1.3.0)
 
 - update `wp-salts` to v2.0.0
