@@ -1,12 +1,10 @@
 # vscode-wordpress-salts
 
-[![The MIT License](https://flat.badgen.net/badge/license/MIT/orange)](http://opensource.org/licenses/MIT)
-[![GitHub](https://flat.badgen.net/github/release/idleberg/vscode-wordpress-salts)](https://github.com/idleberg/vscode-wordpress-salts/releases)
-[![Visual Studio Marketplace](https://vsmarketplacebadge.apphb.com/installs-short/idleberg.wordpress-salts.svg?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=idleberg.wordpress-salts)
-[![CI](https://img.shields.io/github/actions/workflow/status/idleberg/vscode-wordpress-salts/default.yml?style=flat-square)](https://github.com/idleberg/vscode-wordpress-salts/actions)
-[![David](https://flat.badgen.net/david/dep/idleberg/vscode-wordpress-salts)](https://david-dm.org/idleberg/vscode-wordpress-salts)
+> Context-aware WordPress salt key generation for PHP, YAML and DotEnv files without the need of an internet-connection
 
-Context-aware WordPress salt key generation for PHP, YAML and DotEnv files without the need of an internet-connection
+[![Version](https://img.shields.io/github/v/release/idleberg/vscode-wordpress-salts?style=for-the-badge)](https://github.com/idleberg/vscode-wordpress-salts/releases)
+[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/idleberg.nsis?style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=idleberg.nsis)
+[![Build](https://img.shields.io/github/actions/workflow/status/idleberg/vscode-wordpress-salts/default.yml?style=for-the-badge)](https://github.com/idleberg/vscode-wordpress-salts/actions)
 
 ## Installation
 
