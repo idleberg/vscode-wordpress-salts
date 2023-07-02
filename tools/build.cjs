@@ -3,7 +3,7 @@ require('esbuild')
   .build({
     bundle: true,
     entryPoints: ['src/index.ts'],
-    external: ['vscode', 'wp-salts'],
+    external: ['vscode'],
     minify: true,
     outfile: 'lib/extension.js',
     platform: 'node',
