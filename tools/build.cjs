@@ -9,6 +9,5 @@ require('esbuild')
     minify: !isDevMode,
     outfile: 'lib/extension.js',
     platform: 'node',
-    sourcemap: !isDevMode,
-    watch: isDevMode
+    sourcemap: !isDevMode
   }).catch(() => process.exit(1))
