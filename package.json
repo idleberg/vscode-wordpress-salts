@@ -2,7 +2,7 @@
   "name": "wordpress-salts",
   "displayName": "WordPress Salts",
   "description": "Context-aware WordPress salts generation for PHP, YAML, DotEnv and JSON files without the need of an internet-connection",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "publisher": "idleberg",
   "license": "MIT",
   "author": {
