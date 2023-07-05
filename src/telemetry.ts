@@ -9,7 +9,7 @@ function stringifyProperties(properties: Record<string, unknown>): TelemetryEven
 }
 
 export async function sendTelemetryEvent(name: string, properties: Record<string, unknown> = {}, measurements: TelemetryEventMeasurements = {}) {
-  const { disableTelemetry } = await getConfig('applescript');
+  const { disableTelemetry } = await getConfig('wordpress-salts');
 
   if (disableTelemetry) {
     return;

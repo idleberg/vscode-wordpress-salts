@@ -81,7 +81,7 @@
           "description": "Align definitions for better visual grepping",
           "order": 3
         },
-        "applescript.disableTelemetry": {
+        "wordpress-salts.disableTelemetry": {
           "type": "boolean",
           "default": false,
           "description": "Disables extension telemetry, even though the global preferences might allow tracking",

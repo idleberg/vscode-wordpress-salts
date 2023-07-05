@@ -1,3 +1,7 @@
+# v1.4.1 [#](https://github.com/idleberg/vscode-wordpress-salts/releases/tag/v1.4.1)
+
+- fix config source
+
 # v1.4.0 [#](https://github.com/idleberg/vscode-wordpress-salts/releases/tag/v1.4.0)
 
 - add telemetry
