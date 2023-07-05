@@ -65,18 +65,27 @@
           "default": 64,
           "minimum": 64,
           "maximum": 4096,
-          "description": "Default length of salts, between 64 and 4096 characters"
+          "description": "Default length of salts, between 64 and 4096 characters",
+          "order": 1
         },
         "wordpress-salts.jsonIndentation": {
           "type": "number",
           "default": 2,
           "minimum": 0,
-          "description": "Default indentation of JSON strings"
+          "description": "Default indentation of JSON strings",
+          "order": 2
         },
         "wordpress-salts.alignPHP": {
           "type": "boolean",
           "default": true,
-          "description": "Align definitions for better visual grepping"
+          "description": "Align definitions for better visual grepping",
+          "order": 3
+        },
+        "applescript.disableTelemetry": {
+          "type": "boolean",
+          "default": false,
+          "description": "Disables extension telemetry, even though the global preferences might allow tracking",
+          "order": 4
         }
       }
     },

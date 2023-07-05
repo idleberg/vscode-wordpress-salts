@@ -1,3 +1,8 @@
+# v1.4.0 [#](https://github.com/idleberg/vscode-wordpress-salts/releases/tag/v1.4.0)
+
+- add telemetry
+- update dependencies
+
 # v1.3.1 [#](https://github.com/idleberg/vscode-wordpress-salts/releases/tag/v1.3.1)
 
 - fix build config
