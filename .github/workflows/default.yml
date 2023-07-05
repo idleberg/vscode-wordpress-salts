@@ -14,15 +14,11 @@ on:
     branches:
     - main
     paths:
-    - '.github/**'
-    - 'config/**'
-    - 'resources/**'
-    - 'snippets/**'
-    - 'src/**'
-    - 'syntaxes/**'
-    - 'tools/**'
-    - 'package.json'
-    - 'pnpm-lock.yaml'
+      - '.github/**'
+      - 'resources/**'
+      - 'src/**'
+      - 'package.json'
+      - 'package-lock.json'
   workflow_dispatch:
 
 jobs:
