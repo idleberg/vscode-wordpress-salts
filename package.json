@@ -38,7 +38,7 @@
   "bugs": {
     "url": "https://github.com/idleberg/vscode-wordpress-salts/issues"
   },
-  "icon": "images/logo.png",
+  "icon": "resources/logo.png",
   "galleryBanner": {
     "color": "#21759b",
     "theme": "dark"

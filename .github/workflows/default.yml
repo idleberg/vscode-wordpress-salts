@@ -1,13 +1,36 @@
 name: CI
 
-on: [push]
+on:
+  push:
+    branches:
+    - main
+    paths:
+    - '.github/**'
+    - 'resources/**'
+    - 'src/**'
+    - 'package.json'
+    - 'package-lock.json'
+  pull_request:
+    branches:
+    - main
+    paths:
+    - '.github/**'
+    - 'config/**'
+    - 'resources/**'
+    - 'snippets/**'
+    - 'src/**'
+    - 'syntaxes/**'
+    - 'tools/**'
+    - 'package.json'
+    - 'pnpm-lock.yaml'
+  workflow_dispatch:
 
 jobs:
   default:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node-version: ['14', '16']
+        node-version: ['lts/*', '*']
         os: [ubuntu-latest]
 
     steps:
@@ -15,7 +38,7 @@ jobs:
       with:
         fetch-depth: 1
 
-    - uses: actions/setup-node@v2
+    - uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
 
