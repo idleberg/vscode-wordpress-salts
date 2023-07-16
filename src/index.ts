@@ -1,6 +1,6 @@
 'use strict';
 
-import { commands, ExtensionContext, window } from 'vscode';
+import { commands, env, type ExtensionContext, window } from 'vscode';
 import { getConfig } from 'vscode-get-config';
 import { insertText } from 'vscode-insert-text';
 import { reporter, sendTelemetryEvent } from './telemetry';
@@ -15,7 +15,7 @@ import {
 async function activate(context: ExtensionContext): Promise<void> {
   const { disableTelemetry } = await getConfig('wordpress-salts');
 
-  if (disableTelemetry === false) {
+  if (env.appName !== 'VSCodium' && disableTelemetry === false) {
     context.subscriptions.push(reporter);
   }
 
