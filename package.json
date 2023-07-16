@@ -2,7 +2,7 @@
   "name": "wordpress-salts",
   "displayName": "WordPress Salts",
   "description": "Offline WordPress salt key generation for PHP, YAML and DotEnv files",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "publisher": "idleberg",
   "license": "MIT",
   "author": {
