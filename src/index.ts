@@ -50,6 +50,8 @@ async function insertSalt() {
       break;
 
     case 'json':
+    case 'json5':
+    case 'jsonc':
       output = JSON.stringify(salts, null, jsonIndentation);
       break;
 
