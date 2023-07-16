@@ -52,6 +52,8 @@
   "activationEvents": [
     "onLanguage:dotenv",
     "onLanguage:json",
+    "onLanguage:json5",
+    "onLanguage:jsonc",
     "onLanguage:php",
     "onLanguage:yaml"
   ],
