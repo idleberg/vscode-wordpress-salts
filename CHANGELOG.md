@@ -1,5 +1,7 @@
-# v1.4.2 [#](https://github.com/idleberg/vscode-wordpress-salts/releases/tag/v1.4.2)
+# v1.5.0 [#](https://github.com/idleberg/vscode-wordpress-salts/releases/tag/v1.5.0)
 
+- add support for JSON5
+- add support for JSON with Comments
 - update `wp-salts` to v3.0.0
 - fix types
 
