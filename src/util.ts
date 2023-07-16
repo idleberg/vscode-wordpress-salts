@@ -7,7 +7,7 @@ const getLongestString = (input: string[]) => {
   return input[max];
 };
 
-function dotEnvOut(salts: string[]): string {
+function dotEnvOut(salts: Record<string, string>): string {
   const output: Array<string> = [];
 
   Object.keys(salts).map(key => {
@@ -17,7 +17,7 @@ function dotEnvOut(salts: string[]): string {
   return output.join('\n');
 }
 
-async function phpOutput(salts: string[]): Promise<string> {
+async function phpOutput(salts: Record<string, string>): Promise<string> {
   const maxLength = getLongestString(Object.keys(salts)).length;
   const alignPHP = await getConfig('wordpress-salts.alignPHP')
   const output: Array<string> = [];
@@ -33,7 +33,7 @@ async function phpOutput(salts: string[]): Promise<string> {
   return output.join('\n');
 }
 
-function yamlOutput(salts: string[]): string {
+function yamlOutput(salts: Record<string, string>): string {
   const output: Array<string> = [];
 
   Object.keys(salts).map(key => {
