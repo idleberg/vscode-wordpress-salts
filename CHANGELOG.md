@@ -1,3 +1,7 @@
+# v1.5.1 [#](https://github.com/idleberg/vscode-wordpress-salts/releases/tag/v1.5.1)
+
+- update dependencies
+
 # v1.5.0 [#](https://github.com/idleberg/vscode-wordpress-salts/releases/tag/v1.5.0)
 
 - add support for JSON5
