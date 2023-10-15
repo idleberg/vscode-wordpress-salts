@@ -106,7 +106,7 @@
     ]
   },
   "dependencies": {
-    "@vscode/extension-telemetry": "^0.8.1",
+    "@vscode/extension-telemetry": "^0.8.5",
     "vscode-get-config": "^0.4.0",
     "vscode-insert-text": "^1.1.0",
     "wp-salts": "^3.0.0"
@@ -114,11 +114,11 @@
   "devDependencies": {
     "@types/node": "^16.11.17",
     "@types/vscode": "^1.50.0",
-    "@typescript-eslint/eslint-plugin": "^5.8.1",
-    "@typescript-eslint/parser": "^5.8.1",
+    "@typescript-eslint/eslint-plugin": "^6.7.5",
+    "@typescript-eslint/parser": "^6.7.5",
     "cross-env": "^7.0.3",
     "esbuild": "^0.18.13",
-    "eslint": "^8.45.0",
+    "eslint": "^8.51.0",
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-yaml": "^0.5.0",
     "gulp": "^4.0.2",
@@ -126,8 +126,8 @@
     "gulp-rename": "^2.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
-    "npm-run-all2": "^6.0.6",
-    "typescript": "^5.1.6"
+    "npm-run-all2": "^6.1.1",
+    "typescript": "^5.2.2"
   },
   "lint-staged": {
     "*.(ts|json|yml)": "eslint --cache --fix"
