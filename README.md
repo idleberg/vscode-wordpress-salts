@@ -3,7 +3,8 @@
 > Offline WordPress salt key generation for PHP, YAML and DotEnv files
 
 [![Version](https://img.shields.io/github/v/release/idleberg/vscode-wordpress-salts?style=for-the-badge)](https://github.com/idleberg/vscode-wordpress-salts/releases)
-[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/idleberg.nsis?style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=idleberg.nsis)
+[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/idleberg.wordpress-salts?style=for-the-badge&label=Marketplace)](https://marketplace.visualstudio.com/items?itemName=idleberg.wordpress-salts)
+[![Open VSX Downloads](https://img.shields.io/open-vsx/dt/idleberg/wordpress-salts?style=for-the-badge&label=Open%20VSX)](https://open-vsx.org/extension/idleberg/wordpress-salts)
 [![Build](https://img.shields.io/github/actions/workflow/status/idleberg/vscode-wordpress-salts/default.yml?style=for-the-badge)](https://github.com/idleberg/vscode-wordpress-salts/actions)
 
 ## Installation
