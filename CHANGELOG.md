@@ -1,6 +1,8 @@
-# v1.5.1 [#](https://github.com/idleberg/vscode-wordpress-salts/releases/tag/v1.5.1)
+# v1.6.0 [#](https://github.com/idleberg/vscode-wordpress-salts/releases/tag/v1.6.0)
 
+- remove telemetry
 - update dependencies
+- update tooling
 
 # v1.5.0 [#](https://github.com/idleberg/vscode-wordpress-salts/releases/tag/v1.5.0)
 
