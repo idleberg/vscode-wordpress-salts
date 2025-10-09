@@ -2,23 +2,21 @@ name: CI
 
 on:
   push:
-    branches:
-    - main
     paths:
-    - '.github/**'
-    - 'resources/**'
-    - 'src/**'
-    - 'package.json'
-    - 'package-lock.json'
+      - ".github/workflows/**"
+      - "src/**"
+      - "tests/**"
+      - "types/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
   pull_request:
-    branches:
-    - main
     paths:
-      - '.github/**'
-      - 'resources/**'
-      - 'src/**'
-      - 'package.json'
-      - 'package-lock.json'
+      - ".github/workflows/**"
+      - "src/**"
+      - "types/**"
+      - "tests/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
   workflow_dispatch:
 
 jobs:
@@ -26,38 +24,41 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node-version: ['lts/*', '*']
+        node-version: ["lts/*", "*"]
         os: [ubuntu-latest]
 
     steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 1
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
 
-    - uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
+      - uses: pnpm/action-setup@v4
 
-    - name: Cache node modules
-      uses: actions/cache@v2
-      env:
-        cache-name: cache-node-modules
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-build-${{ env.cache-name }}-
-          ${{ runner.os }}-build-
-          ${{ runner.os }}-
+      - uses: actions/setup-node@v5
+        with:
+          node-version: ${{ matrix.node-version }}
 
-    - name: Install Packages Dependencies
-      run: npm ci
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
-    - name: Lint Source
-      run: npm run lint --if-present
+      - uses: actions/cache@v4
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
-    - name: Build Source
-      run: npm run build --if-present
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --strict-peer-dependencies
 
-    - name: Run Tests
-      run: npm run test --if-present
+      - name: Lint Source
+        run: pnpm exec biome ci
+
+      - name: Build Source
+        run: pnpm run --if-present build
+
+      - name: Run Tests
+        run: pnpm run --if-present test
