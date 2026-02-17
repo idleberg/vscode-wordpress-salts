@@ -17,7 +17,6 @@
     "build:image": "sharp resize 1024 1024 --input src/logo.svg --output resources/logo.png",
     "dev": "tsdown --watch",
     "lint": "biome check",
-    "prepare": "lefthook install",
     "test": "npm run lint",
     "vscode:prepublish": "npm run build"
   },
@@ -111,6 +110,11 @@
     "sharp-cli": "^5.2.0",
     "tsdown": "^0.15.6",
     "typescript": "^5.9.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "lefthook"
+    ]
   },
   "packageManager": "pnpm@10.18.1+sha512.77a884a165cbba2d8d1c19e3b4880eee6d2fcabd0d879121e282196b80042351d5eb3ca0935fa599da1dc51265cc68816ad2bddd2a2de5ea9fdf92adbec7cd34"
 }
