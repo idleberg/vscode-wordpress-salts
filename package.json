@@ -9,7 +9,7 @@
     "name": "Jan T. Sott",
     "url": "http://github.com/idleberg"
   },
-  "main": "./lib/index.js",
+  "main": "./lib/index.cjs",
   "scripts": {
     "compile": "npm run build",
     "build": "concurrently --prefix-colors 'blue,green' 'npm:build:*'",

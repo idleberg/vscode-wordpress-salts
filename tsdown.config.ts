@@ -1,14 +1,15 @@
 import { defineConfig } from 'tsdown';
 
 export default defineConfig({
-  // bundle: true,
-  // cjsInterop: true,
   clean: true,
   entry: ['src/index.ts'],
   external: ['vscode'],
   format: 'cjs',
+  inlineOnly: false,
   minify: true,
+  noExternal: ['vscode-get-config', 'vscode-insert-text', 'wp-salts'],
   outDir: 'lib',
   platform: 'node',
   target: 'es2020',
+  treeshake: true,
 });
