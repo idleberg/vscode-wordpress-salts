@@ -1,6 +1,7 @@
 # v2.0.0 [#](https://github.com/idleberg/vscode-wordpress-salts/releases/tag/v2.0.0)
 
 - require `vscode>=1.98.0`
+- update dependencies
 
 # v1.6.0 [#](https://github.com/idleberg/vscode-wordpress-salts/releases/tag/v1.6.0)
 
